@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Xếp hạng học lực</h1>
+<label for="toan"> Nhập điểm miệng</label>
+<input type="text" name="" id="toan">
+<br>
+<br>
+<label for="ly"> Nhập điểm 15 phút</label>
+<input type="text" name="" id="ly">
+<br>
+<br>
+<label for="hoa"> Nhập điểm giữa kỳ</label>
+<input type="text" name="" id="hoa">
+<br><br>
+<label for="van"> Nhập điểm cuối kỳ</label>
+<input type="text" name="" id="van">
+<br><br>
+<button onclick="kiem_tra()">Kiểm tra</button>
+
+<p id="result"></p>
+<script>
+    function kiem_tra() {
+        let toan = +document.getElementById('toan').value;
+        let ly = +document.getElementById('ly').value;
+        let hoa = +document.getElementById('hoa').value;
+        let van = +document.getElementById('van').value;
+        let tbc = ((toan + ly + hoa + van)/4)
+        let result = "";
+        if (tbc < 4.5) {
+            result = "Học sinh yếu"
+        }
+        if (tbc < 6.5 && tbc >=4.5) {
+            result = "Học sinh trung bình"
+        }
+        if (tbc < 8.0 && tbc >=6.5) {
+            result = "Học sinh khá"
+        }
+        if (tbc >= 8.0) {
+            result = "Học sinh giỏi"
+        }
+        document.getElementById('result').innerHTML = "Điểm trung bình của bạn là : " + tbc + ". Bạn đạt " + result;
+    }
+</script>
+</body>
+</html>

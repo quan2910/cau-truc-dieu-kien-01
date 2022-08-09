@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label for="rose">Doanh số đạt được</label>
+<input type="text" name="" id="rose">
+<br><br>
+<button onclick="kiem_tra()">Kiểm tra</button>
+<p id="hh"></p>
+<script>
+  function kiem_tra(){
+    let doanhso = document.getElementById('rose').value;
+    let hoahong = (doanhso * 5)/100
+      document.getElementById('hh').innerHTML= "Hoa hong dat dc la: "+hoahong
+
+  }
+</script>
+</body>
+</html>

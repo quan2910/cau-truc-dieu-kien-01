@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label for="ts"> Nhap thong so </label>
+<input type="text" name="" id="ts">
+<br><br>
+<label for="dg"> Nhap don gia </label>
+<input type="text" name="" id="dg">
+<br><br>
+<button onclick="kiem_tra()">Kiểm tra</button>
+<br><br>
+<p id="hh"></p>
+<script>
+  function kiem_tra(){
+    let ts = document.getElementById('ts').value;
+    let dg = document.getElementById('dg').value;
+    let cuoc = (ts * dg)
+    document.getElementById('hh').innerHTML= "Cuoc dien thoai la: "+cuoc
+
+  }
+</script>
+</body>
+</html>
